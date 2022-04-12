@@ -1,0 +1,81 @@
+us1
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+then user should see 8 models
+expected names 2022 ECOSPORT, 2022 ESCAPE, 2022 BRONCO SPORT, 2022 BRONCO, 2022 EXPLORER, 2022 EDGE, 2022 MUSTANCH MACH-E, 2022 EXPEDITION
+
+US2 
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+then user should see 4 options on bottom: Explore All Vehicles, See Special Offers, Certified Used, Explore Fuel Choices
+
+us3
+ 
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+then user click on Explore All Vehicles
+and user checks Gas checkbox
+then user should see text under Future Vehicles "Please reset to see Future Vehicles" and  
+
+US4
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+then user click on Explore All Vehicles
+and user checks Gas checkbox
+then Future Vehicles checkbox is disabled 
+
+US5
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+then user click on Explore All Vehicles
+and user chooses Electric 
+then user should see 2022 MUSTANG MACH-3 displayed
+
+US6
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+and user clicks on Certified Used
+and user scrolls to the bottom of the page
+and user clicks on Search Inventory
+then popup with text "To help you find your ideal certified" should be displayed
+
+US7
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+and user clicks on Certified Used
+and user scrolls to the bottom of the page
+and user clicks on Search Inventory
+and user clicks on continue
+then user should be redirected to new page with url "https://www.fordblueadvantage.com/cars-for-sale/all"
+and title should contain "Certified Used Cars for Sale"
+
+US8
+background user is ford page ford.com
+when user clicks on suvs& crossovers
+and user clicks on Fuel Choices
+and user clicks on Fuel Choices dropdown
+then user should see: 6 options Overview,All-Electric,Plug-in Electric, Hybrid Electric,EcoBoost, Diesel
+
+US9
+background user is ford page ford.com
+when user clicks Cars
+and user clicks on 2022 MUSTANG
+and user clicks on Explore 2022 Mustang
+and user clicks on Models & Specs
+then user should see 10 options of Mustangs
+
+US10
+background user is ford page ford.com
+when user clicks Cars
+and user clicks on 2022 MUSTANG
+and user clicks on Explore 2022 Mustang
+and user clicks on Models & Specs
+and user clicks on 2022 FORD MUSTANG SHELBY GT500
+and user looks photo gallery
+and user clicks on Build & Price
+then title is Build Your Mustang
+
+
+
+
+
