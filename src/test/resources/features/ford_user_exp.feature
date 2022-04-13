@@ -1,9 +1,10 @@
 Feature: Ford page ad-hoc test
 
-  Background: user is ford page ford.com
+  Background: user starts on same page
+    When user is on "https://www.ford.com"
   #us1
   Scenario: user checks available models
-    When user clicks on suvs& crossovers
+    When user clicks on SUV & Crossovers
     Then  user should see 8 models
       | 2022 ECOSPORT        |
       | 2022 ESCAPE          |
@@ -54,18 +55,18 @@ Feature: Ford page ad-hoc test
 
  #7
   Scenario: redirected to Ford Blue Advantage page
-    When user clicks on suvs& crossovers
+    When user clicks on SUV & Crossovers
     And user clicks on Certified Used
     And user scrolls to the bottom of the page
     And user clicks on Search Inventory
-    And user clicks on continue
+    And user clicks on Continue
     Then user should be redirected to new page with url "https://www.fordblueadvantage.com/cars-for-sale/all"
     And title should contain "Certified Used Cars for Sale"
 
   #8
   Scenario: check fuel choices
-    When user clicks on suvs& crossovers
-    And user clicks on Fuel Choices
+    When user clicks on SUV & Crossovers
+    And user clicks on Explore Fuel Choices
     And user clicks on Fuel Choices dropdown
     Then user should see 6 options:
       | Overview         |
