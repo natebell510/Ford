@@ -17,7 +17,7 @@ public class LandingPage {
 
     //combine names List
     @FindBy (xpath = "//li[contains(@id,'brand-nav-vm-seg1-')]/div/div[2]/span[2]/a")
-    public WebElement modelNameOF_SUVS_CROSSOVERS;
+    public List<WebElement> modelNameOF_SUVS_CROSSOVERS;
     //years List
     @FindBy (xpath = "//li[contains(@id,'brand-nav-vm-seg1-')]/div/div[2]/span/span")
     public WebElement modelYearOF_SUVS_CROSSOVERS;
@@ -25,13 +25,15 @@ public class LandingPage {
     //2
     // list of a tags to extract text
     @FindBy (xpath = " //div[@class='cta-container fgx-brand-container-pad-mbl left-indt-mbl']/div[@class='cta-wrap ']/a[contains(@id,'brand-nav-vm-seg1-lnk')]")
-    public WebElement buttonsExpSeeCertExploreList;
+    public List<WebElement> buttonsExpSeeCertExploreList;
 
     //3
 
     @FindBy (xpath = "//a[@id='brand-nav-vm-seg1-lnk1']")
     public WebElement ExploreAllVehicles;
 
+    @FindBy (xpath= "//button[@class='onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button onetrust-lg ot-close-icon']")
+    public WebElement closeCookiePopUp;
 
     //6
 
@@ -41,8 +43,13 @@ public class LandingPage {
 
     //7
 
-    @FindBy (xpath = "//h2[.='Search Inventory']")
+    //h2[.='Search Inventory']
+    @FindBy (xpath = "//li[@class='kba-item col-xs-12 col-sm-4'][2]")
     public WebElement bottomSearchInventory;
+
+
+    @FindBy (xpath = "//h2[.='Search Inventory']")
+    public WebElement SearchInventory;
 
     //3
     @FindBy(xpath = "//span[@aria-label='View Future Vehicle Models Only']")
@@ -60,10 +67,13 @@ public class LandingPage {
 
 
     //5
-    @FindBy (xpath = "//strong[@data-ng-bind-template='MUSTANG MACH-E']")
-    public WebElement mustangMachE;
+    @FindBy (xpath = "//div[@aria-label='click to view all models for 2022 , Mustang Mach-E']")
+    public WebElement mustangMachEImage;
 
     //7
+    @FindBy(xpath = "//p[contains(text(),'To help')]")
+    public WebElement beforeContinueMessage;
+
 
     @FindBy (xpath = "//body/div[8]/div/div[3]/div[2]/div/div/div[1]/a")
     public WebElement Continue;
@@ -81,7 +91,7 @@ public class LandingPage {
 
     //list of dropdown text
     @FindBy (xpath = "//ul[@class='dropdown subnav subnav-wrapper open']/li/span/a/span")
-    public WebElement dropdownFuelChoices;
+    public List<WebElement> dropdownFuelChoices;
 
     //9
 
@@ -95,6 +105,9 @@ public class LandingPage {
 
 
 
+    @FindBy (xpath = "//*[@id=\"brand-nav-vm-seg4-mustang-item\"]/div/div[1]/div/div[2]/a/picture/img")
+    public WebElement xMustang2022;
+
 
     @FindBy (xpath = "//span[@class='dropdown-font fgx-brand-global-container-pad-left']")
     public WebElement Explore2022Mustang;
@@ -105,7 +118,7 @@ public class LandingPage {
 
     //list of mustang option
     @FindBy (xpath = "//div[@class='sub-component-wrap']/div")
-    public WebElement MustangOptions;
+    public List <WebElement> MustangOptions;
 
 
     @FindBy (xpath = "//h3/a[@href='/cars/mustang/2022/models/shelby-gt500/']")
@@ -122,7 +135,15 @@ public class LandingPage {
 
 
     @FindBy (xpath = "//*[@id=\"component01\"]/div/div/div/div[1]/div[1]/div/div/div/div/div[2]/a")
-    public List<WebElement> Build_AND_Price;
+    public WebElement Build_AND_Price;
+
+
+
+    @FindBy (xpath = "//input[@class='postal-input form-control text-center']")
+    public WebElement buildZipCodeInput;
+
+    @FindBy (xpath = "//button[@class='btn btn-enter btn-primary btn-lg']")
+    public WebElement buildZipCodeEnterButton;
 
 
 

@@ -1,6 +1,6 @@
 node {
     stage('Clone code') {
-        git 'https://github.com/natebell510/******.git'
+        git 'https://github.com/natebell510/Ford.git'
     }
 
     stage('Run tests'){
