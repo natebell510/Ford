@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class LandingPage {
     public LandingPage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -87,6 +89,40 @@ public class LandingPage {
     @FindBy (xpath = "//span[.='CARS']/span")
     public WebElement Cars;
 
+
+    @FindBy (xpath = "//div[5]/nav/div[2]/div[2]/ul/ul[1]/li/div/ul/li[4]/div/div[1]/ul/li/div/div[2]")
+    public WebElement Mustang2022;
+
+
+
+
+    @FindBy (xpath = "//span[@class='dropdown-font fgx-brand-global-container-pad-left']")
+    public WebElement Explore2022Mustang;
+
+
+    @FindBy (xpath = "//li/span/a/span[.='Models & Specs']")
+    public WebElement Models_Specs;
+
+    //list of mustang option
+    @FindBy (xpath = "//div[@class='sub-component-wrap']/div")
+    public WebElement MustangOptions;
+
+
+    @FindBy (xpath = "//h3/a[@href='/cars/mustang/2022/models/shelby-gt500/']")
+    public WebElement MustangShelbyGT500;
+
+
+    //hover over
+    @FindBy (xpath = "//div[@class='carousel-btn carousel-next']")
+    public WebElement carouselNextPicture;
+
+    // list of pictures carousel
+    @FindBy (xpath = "//div[@class='carousel-inner fgx-global-pad-right-lg']/div")
+    public List<WebElement> ListOfPictures;
+
+
+    @FindBy (xpath = "//*[@id=\"component01\"]/div/div/div/div[1]/div[1]/div/div/div/div/div[2]/a")
+    public List<WebElement> Build_AND_Price;
 
 
 
